@@ -19,7 +19,7 @@
     "prepare": "husky install",
     "release": "release-it",
     "lint": "prettier --config prettier.config.js \"**/*.{js,ts,jsx,tsx,json}\" --write --ignore-unknown",
-    "postinstall": "is-ci || (npm run prepare && npm run lint, "./commitlintRules.config.js""
+    "postinstall": "is-ci || (npm run prepare && npm run lint)"
   },
   "eslintConfig": {
     "extends": [
