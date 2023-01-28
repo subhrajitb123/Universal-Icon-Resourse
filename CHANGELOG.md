@@ -1,3 +1,12 @@
+# Changelog
+
+## [0.2.0](https://github.com/subhrajitb123/Universal-Icon-Resourse/compare/v0.1.2...v0.2.0) (2023-01-28)
+
+
+### ✨ Features
+
+* **blog:** add comment section ([19a2214](https://github.com/subhrajitb123/Universal-Icon-Resourse/commit/19a221481667830af1204173d8d98551fedf3623))
+
 ## [0.1.2](https://github.com/subhrajitb123/Universal-Icon-Resourse/compare/v0.1.2...0.1.1) (2023-01-23)
 ### *
 * <wip>:<just a testing commit> ([8729f0](https://github.com/subhrajitb123/Universal-Icon-Resourse/commit/8729f0d7ca22409cee2e03941cf2625799e7093d))
@@ -10,4 +19,3 @@
 
 
 ## [first commit](https://github.com/subhrajitb123/Universal-Icon-Resourse/commit/4ffd3f75de805f3d504a593420fddce333d29f5c) (2023-01-23)
-
