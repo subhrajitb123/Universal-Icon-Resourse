@@ -1,11 +1,35 @@
-import logo from "./logo.svg"
-import "./App.css"
+import React, { useState } from "react"
+import SignUp from "./component/Signup"
+import SignIn from "./component/Signin"
+import Home from "./component/Home"
+import Contact from "./component/Contact"
 
-function App() {
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+
+const App = () => {
 	return (
-		<div className="App">
-			<p>Hello world you are welcome</p>
-		</div>
+		<>
+			<Router>
+				<Routes>
+					<Route
+						path="/"
+						element={<Home />}
+					></Route>
+					<Route
+						path="/login"
+						element={<SignIn />}
+					></Route>
+					<Route
+						path="/register"
+						element={<SignUp />}
+					></Route>
+					<Route
+						path="/Contact"
+						element={<Contact />}
+					></Route>
+				</Routes>
+			</Router>
+		</>
 	)
 }
 
