@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.2.1](https://github.com/subhrajitb123/Universal-Icon-Resourse/compare/v0.2.0...v0.2.1) (2023-02-01)
+
+
+### 🚧 Work In Progress
+
+* added login and sigin function ([8edb1d1](https://github.com/subhrajitb123/Universal-Icon-Resourse/commit/8edb1d10087dd559cf041b60f046298b0cefa589))
+
 ## [0.2.0](https://github.com/subhrajitb123/Universal-Icon-Resourse/compare/v0.1.2...v0.2.0) (2023-01-28)
 
 
