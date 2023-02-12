@@ -1,10 +1,12 @@
 import React, { useState } from "react"
+import FontAwesome from "../AlliconComponent/fontawsome"
 
-const Section = () => {
+const Section = props => {
 	const [searchTerm, setSearchTerm] = useState("")
 
 	const handleChange = e => {
 		setSearchTerm(e.target.value)
+		props.setSearchText(e.target.value)
 	}
 
 	return (
@@ -19,6 +21,8 @@ const Section = () => {
 						className="w-full mx-auto p-2 shadow-md rounded-md text-gray-700 focus:outline-none focus:shadow-outline"
 						type="text"
 						placeholder="Search..."
+						value={searchTerm}
+						onChange={handleChange}
 					/>
 				</div>
 				<style>
