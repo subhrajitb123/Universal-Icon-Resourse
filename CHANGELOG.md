@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.2.3](https://github.com/subhrajitb123/Universal-Icon-Resourse/compare/v0.2.2...v0.2.3) (2023-02-12)
+
+
+### 🚧 Work In Progress
+
+* improved user interface ([48a461c](https://github.com/subhrajitb123/Universal-Icon-Resourse/commit/48a461c46a5cd8a04da0cceed537162cc6d5a3b3))
+
 ### [0.2.2](https://github.com/subhrajitb123/Universal-Icon-Resourse/compare/v0.2.1...v0.2.2) (2023-02-11)
 
 
