@@ -16,62 +16,40 @@ const FontAwesome = ({ value2 }) => {
 		setSelectedIcon("icon")
 	}
 
-	const filteredIcons = icons.filter(icon =>
-		icon.toLowerCase().includes(value2.toLowerCase())
-	)
+	const filteredIcons =
+		value2 === ""
+			? icons
+			: icons.filter(icon =>
+					icon.toLowerCase().includes(value2.toLowerCase())
+			  )
 
 	console.log(filteredIcons)
 
 	return (
-		<div>
-			{filteredIcons.length === 0 || !filteredIcons ? (
-				<div className="flex flex-wrap">
-					{icons.map(icon => (
-						<div
-							key={icon}
-							className="w-1/2 sm:w-1/2 md:w-1/4 lg:w-1/6 text-center py-4 cursor-pointer"
-							onClick={() => handleClick(icon)}
-						>
-							<FontAwesomeIcon
-								icon={["fas", icon.split(" ")[1]]}
-								style={{ width: "100px", height: "100px" }}
-								className={
-									selectedIcon === icon
-										? "bg-sky-700"
-										: "bg-transparent"
-								}
-							/>
-							<p className="text-sm">
-								{icon.split(" ")[1].split("-")[1]}
-							</p>
-						</div>
-					))}
-				</div>
-			) : (
-				<div className="flex flex-wrap">
-					{filteredIcons.map(icon => (
-						<div
-							key={icon}
-							className="w-1/2 sm:w-1/2 md:w-1/4 lg:w-1/6 text-center py-4 cursor-pointer"
-							onClick={() => handleClick(icon)}
-						>
-							<FontAwesomeIcon
-								icon={["fas", icon.split(" ")[1]]}
-								style={{ width: "100px", height: "100px" }}
-								className={
-									selectedIcon === icon
-										? "bg-sky-700"
-										: "bg-transparent"
-								}
-							/>
-							<p className="text-sm">
-								{icon.split(" ")[1].split("-")[1]}
-							</p>
-						</div>
-					))}
-				</div>
-			)}
-		</div>
+		<>
+			<div className="flex flex-wrap w-full">
+				{filteredIcons.map((icon, index) => (
+					<div
+						key={icon + index}
+						className="w-1/2 sm:w-1/2 md:w-1/4 lg:w-1/6 text-center py-4 cursor-pointer"
+						onClick={() => handleClick(icon)}
+					>
+						<FontAwesomeIcon
+							icon={["fas", icon.split(" ")[1]]}
+							style={{ width: "100px", height: "100px" }}
+							className={
+								selectedIcon === icon
+									? "bg-sky-700"
+									: "bg-transparent"
+							}
+						/>
+						<p className="text-sm">
+							{icon.split(" ")[1].split("-")[1]}
+						</p>
+					</div>
+				))}
+			</div>
+		</>
 	)
 }
 

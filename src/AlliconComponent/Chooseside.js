@@ -7,12 +7,12 @@ const Chooseside = props => {
 
 	useEffect(() => {
 		setvalue2(props.searchText)
-	})
+	}, [props.searchText])
 
 	useEffect(() => {}, [value1])
 	return (
 		<>
-			<div className=" flex flex-col items-center justify-center w-full h-screen">
+			<div className=" flex flex-col items-center justify-center w-full h-screen1">
 				<h1 className="text-2xl p-2">
 					Choose The Provider Of your choice From The Dropdown
 				</h1>
@@ -21,11 +21,18 @@ const Chooseside = props => {
 					<option value="Fontawsome">Font Awsome</option>
 					<option value="Feather">Feather</option>
 					<option value="Heroicon">HeroIcon</option>
-					<option value="Fontawsome">Font Awsome</option>
+					<option value="AntDesign">Ant Design</option>
 				</select>
+				<style>
+					{`
+			.h-screen1 {
+				height: 40vh;
+			}
+			`}
+				</style>
 			</div>
 
-			<div className="flex flex-wrap">
+			<div>
 				<ResultPage
 					value1={value1}
 					value2={value2}

@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react"
-import heroicondata from "../Databases/heroicondata.json"
+import React, { useEffect, useState } from "react"
+import antdesigndata from "../Databases/antdesigndata.json"
 
-const Heroicon = ({ value2 }) => {
-	const Icons = heroicondata.icons
-
+const AntDesign = ({ value2 }) => {
+	const Icons = antdesigndata.icons
 	const [filteredIcons, setFilteredIcons] = useState([])
 
 	useEffect(() => {
@@ -15,27 +14,7 @@ const Heroicon = ({ value2 }) => {
 
 	return (
 		<>
-			{!filteredIcons ? (
-				<div className="flex flex-wrap">
-					{Object.entries(Icons).map(([key, icon], index) => (
-						<div
-							key={index}
-							className="w-1/2 sm:w-1/2 md:w-1/4 lg:w-1/6 text-center py-4 cursor-pointer"
-						>
-							<svg
-								viewBox={`0 0 ${(icon.width = 30)} ${(icon.height = 30)}`}
-							>
-								{icon.body && (
-									<path
-										d={icon.body.match(/d="([^"]+)"/)[1]}
-									/>
-								)}
-							</svg>
-							<p className="text-sm">{key}</p>
-						</div>
-					))}
-				</div>
-			) : (
+			{filteredIcons.length > 0 ? (
 				<div className="flex flex-wrap">
 					{filteredIcons.map(([key, icon], index) => (
 						<div
@@ -47,7 +26,33 @@ const Heroicon = ({ value2 }) => {
 							>
 								{icon.body && (
 									<path
-										d={icon.body.match(/d="([^"]+)"/)[1]}
+										d={icon.body.replace(
+											/^.*d="([^"]+)".*$/,
+											"$1"
+										)}
+									/>
+								)}
+							</svg>
+							<p className="text-sm">{key}</p>
+						</div>
+					))}
+				</div>
+			) : (
+				<div className="flex flex-wrap">
+					{Object.entries(Icons).map(([key, icon], index) => (
+						<div
+							key={index}
+							className="w-1/2 sm:w-1/2 md:w-1/4 lg:w-1/6 text-center py-4 cursor-pointer"
+						>
+							<svg
+								viewBox={`0 0 ${(icon.width = 30)} ${(icon.height = 30)}`}
+							>
+								{icon.body && (
+									<path
+										d={icon.body.replace(
+											/^.*d="([^"]+)".*$/,
+											"$1"
+										)}
 									/>
 								)}
 							</svg>
@@ -60,4 +65,4 @@ const Heroicon = ({ value2 }) => {
 	)
 }
 
-export default Heroicon
+export default AntDesign

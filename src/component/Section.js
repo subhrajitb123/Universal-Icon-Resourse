@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import FontAwesome from "../AlliconComponent/fontawsome"
 
 const Section = props => {
 	const [searchTerm, setSearchTerm] = useState("")
@@ -28,7 +27,7 @@ const Section = props => {
 				<style>
 					{`
 			.h-screen {
-				height: 75vh;
+				height: 70vh;
 			}
 			`}
 				</style>
