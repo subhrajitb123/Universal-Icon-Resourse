@@ -1,5 +1,13 @@
 # Changelog
 
+### [0.2.5](https://github.com/subhrajitb123/Universal-Icon-Resourse/compare/v0.2.4...v0.2.5) (2023-02-24)
+
+
+### 🚧 Work In Progress
+
+* working on final page ([f23c45f](https://github.com/subhrajitb123/Universal-Icon-Resourse/commit/f23c45f6b3e440ab5066252374edafc584dd779e))
+* working on final page ([240edcf](https://github.com/subhrajitb123/Universal-Icon-Resourse/commit/240edcf03145adfa8ae42685278ab1fdfed4a619))
+
 ### [0.2.4](https://github.com/subhrajitb123/Universal-Icon-Resourse/compare/v0.2.3...v0.2.4) (2023-02-13)
 
 
