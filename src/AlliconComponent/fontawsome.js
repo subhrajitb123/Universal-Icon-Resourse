@@ -3,17 +3,20 @@ import fontawesomeData from "../Databases/fontawsomedata.json"
 import { library } from "@fortawesome/fontawesome-svg-core"
 import { fas } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { useNavigate } from "react-router-dom"
 
 library.add(fas)
 
 const FontAwesome = ({ value2 }) => {
 	const icons = fontawesomeData.icons
+	const type = "class"
+	const navigate = useNavigate()
 
 	const [selectedIcon, setSelectedIcon] = useState(null)
 
 	const handleClick = icon => {
-		console.log("click the icon that is " + icon)
-		setSelectedIcon("icon")
+		setSelectedIcon(icon)
+		navigate(`/finalpage`, { state: { icon, type } })
 	}
 
 	const filteredIcons =

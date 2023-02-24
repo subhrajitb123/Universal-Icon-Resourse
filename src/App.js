@@ -5,6 +5,7 @@ import Home from "./component/Home"
 import Contact from "./component/Contact"
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import Finalpage from "./AlliconComponent/FinalPage"
 
 const App = () => {
 	return (
@@ -26,6 +27,10 @@ const App = () => {
 					<Route
 						path="/Contact"
 						element={<Contact />}
+					></Route>
+					<Route
+						path="/finalpage"
+						element={<Finalpage />}
 					></Route>
 				</Routes>
 			</Router>

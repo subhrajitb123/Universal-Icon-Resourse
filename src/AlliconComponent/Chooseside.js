@@ -19,9 +19,11 @@ const Chooseside = props => {
 				<br />
 				<select onChange={e => setvalue(e.target.value)}>
 					<option value="Fontawsome">Font Awsome</option>
-					<option value="Feather">Feather</option>
 					<option value="Heroicon">HeroIcon</option>
 					<option value="AntDesign">Ant Design</option>
+					<option value="Feather">Feather</option>
+					<option value="MDI">Matrial Design Icon</option>
+					<option value="Fluent">Fluent Icon</option>
 				</select>
 				<style>
 					{`
