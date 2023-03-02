@@ -24,6 +24,7 @@ const Chooseside = props => {
 					<option value="Feather">Feather</option>
 					<option value="MDI">Matrial Design Icon</option>
 					<option value="Fluent">Fluent Icon</option>
+					<option value="Bootstrap">Bootstrap Icon</option>
 				</select>
 				<style>
 					{`

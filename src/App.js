@@ -6,6 +6,8 @@ import Contact from "./component/Contact"
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Finalpage from "./AlliconComponent/FinalPage"
+import FinalpageH from "./Final pages/FinalPageH"
+import Finalpagefe from "./Final pages/FinalPagefe"
 
 const App = () => {
 	return (
@@ -31,6 +33,14 @@ const App = () => {
 					<Route
 						path="/finalpage"
 						element={<Finalpage />}
+					></Route>
+					<Route
+						path="/finalpageH"
+						element={<FinalpageH />}
+					></Route>
+					<Route
+						path="/finalpagefe"
+						element={<Finalpagefe />}
 					></Route>
 				</Routes>
 			</Router>

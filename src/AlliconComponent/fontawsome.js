@@ -34,19 +34,19 @@ const FontAwesome = ({ value2 }) => {
 				{filteredIcons.map((icon, index) => (
 					<div
 						key={icon + index}
-						className="w-1/2 sm:w-1/2 md:w-1/4 lg:w-1/6 text-center py-4 cursor-pointer"
+						className="w-1/2 sm:w-1/2 md:w-1/4 lg:w-1/6 text-center py-4 cursor-pointer p-4 rounded-md shadow-md hover:bg-gray-100 cursor-pointer"
 						onClick={() => handleClick(icon)}
 					>
 						<FontAwesomeIcon
 							icon={["fas", icon.split(" ")[1]]}
-							style={{ width: "100px", height: "100px" }}
+							style={{ width: "100px", height: "150px" }}
 							className={
 								selectedIcon === icon
 									? "bg-sky-700"
 									: "bg-transparent"
 							}
 						/>
-						<p className="text-sm">
+						<p className="text-sm m-5">
 							{icon.split(" ")[1].split("-")[1]}
 						</p>
 					</div>

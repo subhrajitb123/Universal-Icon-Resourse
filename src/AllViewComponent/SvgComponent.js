@@ -1,18 +1,21 @@
 import React from "react"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { icon, library } from "@fortawesome/fontawesome-svg-core"
-import { faCoffee } from "@fortawesome/free-solid-svg-icons"
-
-library.add(faCoffee)
+import { library } from "@fortawesome/fontawesome-svg-core"
+import { findIconDefinition, icon } from "@fortawesome/fontawesome-svg-core"
 
 const SvgComponent = ({ icon1 }) => {
-	const chosenIcon = library.definitions.fas[icon1]
-	const iconData = icon(chosenIcon)
+	const [prefix, name] = icon1.split(" ")
+	const iconDefinition = findIconDefinition({ name })
+	const pathData = icon(iconDefinition)?.icon?.[4]
+
+	const style = {
+		maxWidth: "300px",
+		wordWrap: "break-word",
+	}
 
 	return (
 		<div>
-			<pre>{iconData.render().html}</pre>
-			<FontAwesomeIcon icon={icon1} />
+			<p>{name}</p>
+			<p style={style}>{pathData}</p>
 		</div>
 	)
 }
