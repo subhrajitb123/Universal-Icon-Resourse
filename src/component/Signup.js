@@ -27,6 +27,19 @@ const SignUp = () => {
 		}
 	}
 
+	const handlesubmit1 = () => {
+		firebase
+			.SignupWithGoogle()
+			.then(() => {
+				alert("Successfully signIn with Google")
+			})
+			.catch(error => {
+				const errorCode = error.code
+				const errorMessage = error.message
+				console.log(errorMessage)
+			})
+	}
+
 	const navigate = useNavigate()
 
 	return (
@@ -94,6 +107,18 @@ const SignUp = () => {
 									onClick={handleSubmit}
 								>
 									Sign Up
+								</button>
+							</div>
+							<div className="flex items-center justify-between mb-2">
+								OR
+							</div>
+							<div className="flex items-center justify-between mb-4">
+								<button
+									className=" w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+									type="submit"
+									onClick={handlesubmit1}
+								>
+									Google
 								</button>
 							</div>
 							<div className="flex items-center justify-between">

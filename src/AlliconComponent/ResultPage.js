@@ -12,7 +12,6 @@ const ResultPage = ({ value1, value2 }) => {
 		<div>
 			{value1 === "Fontawsome" && <Fontawsome value2={value2} />}
 			{value1 === "Heroicon" && <Heroicon value2={value2} />}
-			{value1 === "AntDesign" && <AntDesign value2={value2} />}
 			{value1 === "Feather" && <Feather1 value2={value2} />}
 			{value1 === "Bootstrap" && <Bootstrap value2={value2} />}
 			{value1 === "Fluent" && <Fluent value2={value2} />}

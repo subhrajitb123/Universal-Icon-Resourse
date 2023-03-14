@@ -11,11 +11,18 @@ const SignIn = () => {
 
 	const handleSubmit = async e => {
 		e.preventDefault()
-		if (await firebase.LoginUserWithEmailAndPassword(email, password)) {
-			alert("successfully login in the Application")
-		} else {
-			alert("something is wrong")
-		}
+		firebase
+			.LoginUserWithEmailAndPassword(email, password)
+			.then(userCredential => {
+				// Signed in
+				const user = userCredential.user
+				alert("successfully logged In")
+			})
+			.catch(error => {
+				const errorCode = error.code
+				const errorMessage = error.message
+				alert(errorMessage)
+			})
 	}
 
 	return (
@@ -68,9 +75,20 @@ const SignIn = () => {
 									Sign In
 								</button>
 							</div>
+							<div className="flex items-center justify-between mb-4">
+								<Link
+									to="/register"
+									className="cursor-pointer underline"
+								>
+									New account Sign Up
+								</Link>
+							</div>
 							<div className="flex items-center justify-between">
-								<Link to="/register">
-									If do not have a account Sign Up
+								<Link
+									to="/forget"
+									className="cursor-pointer underline"
+								>
+									Forget Password
 								</Link>
 							</div>
 						</form>

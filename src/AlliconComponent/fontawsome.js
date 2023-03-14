@@ -30,23 +30,23 @@ const FontAwesome = ({ value2 }) => {
 
 	return (
 		<>
-			<div className="flex flex-wrap w-full">
+			<div className="flex flex-wrap justify-center items-center">
 				{filteredIcons.map((icon, index) => (
 					<div
 						key={icon + index}
-						className="w-1/2 sm:w-1/2 md:w-1/4 lg:w-1/6 text-center py-4 cursor-pointer p-4 rounded-md shadow-md hover:bg-gray-100 cursor-pointer"
+						className="w-48 md:w-56 text-center cursor-pointer p-2 rounded-md shadow-md hover:bg-gray-100 cursor-pointer my-2 mx-2"
 						onClick={() => handleClick(icon)}
 					>
 						<FontAwesomeIcon
 							icon={["fas", icon.split(" ")[1]]}
-							style={{ width: "100px", height: "150px" }}
+							style={{ width: "70px", height: "100px" }}
 							className={
 								selectedIcon === icon
 									? "bg-sky-700"
 									: "bg-transparent"
 							}
 						/>
-						<p className="text-sm m-5">
+						<p className="text-sm m-2">
 							{icon.split(" ")[1].split("-")[1]}
 						</p>
 					</div>

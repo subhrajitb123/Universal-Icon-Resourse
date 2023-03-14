@@ -24,29 +24,28 @@ const Feather1 = ({ value2 }) => {
 
 	return (
 		<>
-			<div className="flex flex-wrap justify-center">
+			<div className="flex flex-wrap justify-center align-center">
 				{filteredIcons.map(icon => {
 					const iconName = icon.split("/")[1]
 					const svg = feather.icons[iconName].toSvg({
-						width: 100,
-						height: 150,
+						width: 70,
+						height: 100,
 					})
 					return (
 						<div
 							key={icon}
-							className="w-1/2 sm:w-1/2 md:w-1/4 lg:w-1/6 text-center py-4 cursor-pointer p-4 rounded-md shadow-md hover:bg-gray-100 cursor-pointer"
+							className="w-48 md:w-56 text-center p-2 cursor-pointer rounded-md shadow-md hover:bg-gray-100 cursor-pointer my-2 mx-2"
 							onClick={() => handleOnClick(icon)}
 						>
 							<div
-								//style={{ width: "100px", height: "100px" }}
 								className={`${
 									selectedIcon === icon
 										? "bg-sky-700"
 										: "bg-transparent"
-								} flex items-center justify-center`}
+								} flex items-center justify-center align-center`}
 								dangerouslySetInnerHTML={{ __html: svg }}
 							/>
-							<p className="text-sm m-5">{icon.split("/")[1]}</p>
+							<p className="text-sm">{icon.split("/")[1]}</p>
 						</div>
 					)
 				})}

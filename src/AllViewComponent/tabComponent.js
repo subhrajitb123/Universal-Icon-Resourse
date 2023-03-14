@@ -3,9 +3,12 @@ import HtmlComponent from "./htmlComponent"
 import ReactComponent from "./ReactComponent"
 import SvgComponent from "./SvgComponent"
 
-const TabComponent = ({ icon, type }) => {
+const TabComponent = ({ icon, type, provider, key12 }) => {
 	const [activeTab, setActiveTab] = useState(1)
 	const icon1 = icon
+	const type1 = type
+	const provider1 = provider
+	const key1 = key12
 
 	const handleTabClick = tabIndex => {
 		setActiveTab(tabIndex)
@@ -45,9 +48,30 @@ const TabComponent = ({ icon, type }) => {
 					SVG
 				</button>
 			</div>
-			{activeTab === 1 && <HtmlComponent icon1={icon1} />}
-			{activeTab === 2 && <ReactComponent icon1={icon1} />}
-			{activeTab === 3 && <SvgComponent icon1={icon1} />}
+			{activeTab === 1 && (
+				<HtmlComponent
+					icon1={icon1}
+					type1={type1}
+					provider1={provider1}
+					key1={key1}
+				/>
+			)}
+			{activeTab === 2 && (
+				<ReactComponent
+					icon1={icon1}
+					type1={type1}
+					provider1={provider1}
+					key1={key1}
+				/>
+			)}
+			{activeTab === 3 && (
+				<SvgComponent
+					icon1={icon1}
+					type1={type1}
+					provider1={provider1}
+					key1={key1}
+				/>
+			)}
 		</div>
 	)
 }
