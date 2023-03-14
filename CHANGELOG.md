@@ -1,5 +1,7 @@
 # Changelog
 
+* feat(blog): complted the work (c0eb3e9)
+
 ### [0.2.6](https://github.com/subhrajitb123/Universal-Icon-Resourse/compare/v0.2.5...v0.2.6) (2023-03-02)
 
 
