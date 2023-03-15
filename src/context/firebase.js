@@ -15,6 +15,8 @@ import {
 	collection,
 	addDoc,
 	onSnapshot,
+	doc,
+	deleteDoc,
 } from "firebase/firestore"
 
 const FirebaseContext = createContext(null)
@@ -91,6 +93,30 @@ export const FirebaseProvider = props => {
 			})
 	}
 
+	const deleteFavorite = iconId => {
+		const currentUser = firebaseAuth.currentUser
+		if (!currentUser) {
+			alert("You need to be signed in to delete favorites.")
+			return
+		}
+
+		const favoriteRef = doc(
+			db,
+			"users",
+			currentUser.uid,
+			"favorites",
+			iconId
+		)
+
+		deleteDoc(favoriteRef)
+			.then(() => {
+				alert("Favorite deleted successfully!")
+			})
+			.catch(error => {
+				alert(`Error deleting favorite: ${error.message}`)
+			})
+	}
+
 	const fetchFavorites = () => {
 		const currentUser = firebaseAuth.currentUser
 		if (!currentUser) {
@@ -129,6 +155,7 @@ export const FirebaseProvider = props => {
 				favorites,
 				fetchFavorites,
 				SignupWithGoogle,
+				deleteFavorite,
 			}}
 		>
 			{props.children}
