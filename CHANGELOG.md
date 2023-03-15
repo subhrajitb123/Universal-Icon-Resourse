@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.3.1](https://github.com/subhrajitb123/Universal-Icon-Resourse/compare/v0.3.0...v0.3.1) (2023-03-15)
+
+
+### 🚧 Work In Progress
+
+* Bug fix ([c46e48e](https://github.com/subhrajitb123/Universal-Icon-Resourse/commit/c46e48ef7138e2b979502be2157296960e2a066c))
+
 * feat(blog): complted the work (c0eb3e9)
 
 ### [0.2.6](https://github.com/subhrajitb123/Universal-Icon-Resourse/compare/v0.2.5...v0.2.6) (2023-03-02)
